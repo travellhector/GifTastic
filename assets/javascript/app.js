@@ -48,7 +48,7 @@ $("#add-topic").on("click", function(event) {
 });
 
 
-$(".topic").on("click", function() {
+$(document).on("click", ".topic", function() {
   // In this case, the "this" keyword refers to the button that was clicked
   var getGIF = $(this).attr("data-name");
 
@@ -103,7 +103,7 @@ $(".topic").on("click", function() {
     });
 });
 
-$(".gif").on("click", function() {
+$(document).on("click", ".gif", function() {
   // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
   var state = $(this).attr("data-state");
   // If the clicked image's state is still, update its src attribute to what its data-animate value is.
